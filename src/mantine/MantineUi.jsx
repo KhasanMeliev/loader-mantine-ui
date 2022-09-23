@@ -13,3 +13,4 @@ function MantineUi() {
 }
 
 export default MantineUi;
+
