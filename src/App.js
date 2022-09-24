@@ -1,5 +1,5 @@
-import './App.css';
-import MantineUi from './mantine/MantineUi'
+import "./App.css";
+import MantineUi from "./mantine/MantineUi";
 
 function App() {
   return (

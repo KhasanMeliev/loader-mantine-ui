@@ -1,16 +1,34 @@
-import { Group, Loader, Text } from '@mantine/core'
+import { Group, MantineProvider, Switch } from "@mantine/core";
 function MantineUi() {
-    return (
-        <Group style={{ display: 'flex', flexDirection: 'column' }} spacing={60}>
-            <Loader color="#42a5f5" size={100} variant="oval" />
-            <Loader color="#4f80e2" size={100} variant="bars" />
-            <Loader color="#4fe0b6" size={100} variant="dots" />
+  return (
+    <>
+      <MantineProvider
+        theme={{
+          components: {
+            Button: {
+              defaultProps: {
+                size: "xs",
+                color: "cyan",
+              },
+              
+            },
 
-            <Text color='#fff' size={50}>made by alex</Text>
+            Switch: {
+              defaultProps: {
+                size: "xs",
+                onLabel: "ON",
+                offLabel: "OFF",
+              },
+            },
+          },
+        }}
+      >
+        <Group position="center">
+          <Switch label="Switch" size={50} />
         </Group>
-
-    );
+      </MantineProvider>
+    </>
+  );
 }
 
 export default MantineUi;
-
